@@ -3,18 +3,35 @@
 	<head>
 		<meta charset=îutf-8î>
  		<title> Bootstrap project</title>
-		<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-	<style>
-  .carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
-      width: 70%;
-      margin: auto;
-  }
-  </style>
+ <script type='text/javascript'
+  src='http://code.jquery.com/jquery-1.10.1.js'></script>
+<link rel="stylesheet" type="text/css"
+  href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css"
+  href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+<script type='text/javascript'
+  src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css"
+  href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+<script type='text/javascript'>
+$(window).load(function(){
+$(function () {
+    $("table#mytable").on("click", ".remove", function () {
+        $(this).closest('tr').remove();
+    });
+});
+$(function () {
+    $(".show_tip").tooltip({
+        container: 'body'
+    });
+});
+$(document).click(function () {
+    $('.tooltip').remove();
+    $('[title]').tooltip();
+});
+});
+</script>
+   
     </head>
 	<body>
 <div class="navbar-wrapper">
@@ -35,7 +52,7 @@
               <ul class="nav navbar-nav">
                 <li><a href="index.html">Domov</a></li>
                 <li><a href="contact.html">Kontakt</a></li>
-                <li><a href="tabulka.html">Tabulka</a></li>
+                <li class="active"><a href="tabulka.html">Tabulka</a></li>
     
               </ul>
             </div>
@@ -44,162 +61,310 @@
 
       </div>
     </div>
-
-          <!-- Carousel -->
+        <div class="container">
+  <h2>Tabulka</h2>
+<ul class="nav nav-tabs">
+  <li class="active"><a href="tabulka.html">Zobrazit tabulku</a></li>
+  <li><a href="#">Pridaù nov˝ ˙daj do tabulky</a></li>
+  <li><a href="#">Prekvapenie</a></li>
+</ul>
+</div>
 <div class="container">
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" ></li>
-        <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="2" ></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        <div class="item">
-             <img src="img/007.jpg" class="img-responsive" alt="Flower">
-            <div class="carousel-caption">
-              <h1>Example headline.</h1>
-              <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
-            </div>
-        </div>
-        <div class="item active">
-             <img src="img/006.jpg" class="img-responsive" alt="Flower">
-            <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-            </div>
-          </div>
-       <div class="item">
-            <img src="img/008.jpg" class="img-responsive" alt="Flower">
-            <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
-            </div>
-          </div>
-          </div>    
-      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" ></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" ></span>
-        <span class="sr-only">Next</span>
-      </a>
+	<div class="row">
+      <div class="table-responsive">
+        <table class="table table-hover" id="mytable">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Meno</th>
+              <th>Priezvisko</th>
+              <th>Suma</th>
+                <th>Editovat</th>
 
+            </tr>
+          </thead>
+          <tbody id="myTable">
+      <tr>
+         <th>1</th>
+         <td>Tanmay</td>
+         <td>Bangalore</td>
+         <td>560001</td>
+          <td>
+          <button title="" type="button"
+            class="btn btn-danger remove show_tip"
+            data-original-title="Remove from list">
+            <i class="fa fa-trash-o"></i>
+          </button>
+        </td>
+      </tr>
+      
+      <tr>
+         <th>2</th>
+         <td>Sachin</td>
+         <td>Mumbai</td>
+         <td>400003</td>
+          <td>
+          <button title="" type="button"
+            class="btn btn-danger remove show_tip"
+            data-original-title="Remove from list">
+            <i class="fa fa-trash-o"></i>
+          </button>
+        </td>
+      </tr>
+      
+      <tr>
+         <th>3</th>
+         <td>Uma</td>
+         <td>Pune</td>
+         <td>411027</td>
+          <td>
+          <button title="" type="button"
+            class="btn btn-danger remove show_tip"
+            data-original-title="Remove from list">
+            <i class="fa fa-trash-o"></i>
+          </button>
+        </td>
+      </tr>
+               <tr>
+         <th>4</th>
+         <td>Tanmay</td>
+         <td>Bangalore</td>
+         <td>560001</td>
+                   <td>
+          <button title="" type="button"
+            class="btn btn-danger remove show_tip"
+            data-original-title="Remove from list">
+            <i class="fa fa-trash-o"></i>
+          </button>
+        </td>
+      </tr>
+      
+      <tr>
+         <th>5</th>
+         <td>Sachin</td>
+         <td>Mumbai</td>
+         <td>400003</td>
+          <td>
+          <button title="" type="button"
+            class="btn btn-danger remove show_tip"
+            data-original-title="Remove from list">
+            <i class="fa fa-trash-o"></i>
+          </button>
+        </td>
+      </tr>
+      
+      <tr>
+         <th>6</th>
+         <td>Uma</td>
+         <td>Pune</td>
+         <td>411027</td>
+          <td>
+          <button title="" type="button"
+            class="btn btn-danger remove show_tip"
+            data-original-title="Remove from list">
+            <i class="fa fa-trash-o"></i>
+          </button>
+        </td>
+      </tr>
+               <tr>
+         <th>7</th>
+         <td>Tanmay</td>
+         <td>Bangalore</td>
+         <td>560001</td>
+                   <td>
+          <button title="" type="button"
+            class="btn btn-danger remove show_tip"
+            data-original-title="Remove from list">
+            <i class="fa fa-trash-o"></i>
+          </button>
+        </td>
+      </tr>
+      
+      <tr>
+         <th>8</th>
+         <td>Sachin</td>
+         <td>Mumbai</td>
+         <td>400003</td>
+          <td>
+          <button title="" type="button"
+            class="btn btn-danger remove show_tip"
+            data-original-title="Remove from list">
+            <i class="fa fa-trash-o"></i>
+          </button>
+        </td>
+      </tr>
+      
+      <tr>
+         <th>9</th>
+         <td>Uma</td>
+         <td>Pune</td>
+         <td>411027</td>
+          <td>
+          <button title="" type="button"
+            class="btn btn-danger remove show_tip"
+            data-original-title="Remove from list">
+            <i class="fa fa-trash-o"></i>
+          </button>
+        </td>
+      </tr>
+               <tr>
+         <th>10</th>
+         <td>Tanmay</td>
+         <td>Bangalore</td>
+         <td>560001</td>
+                   <td>
+          <button title="" type="button"
+            class="btn btn-danger remove show_tip"
+            data-original-title="Remove from list">
+            <i class="fa fa-trash-o"></i>
+          </button>
+        </td>
+      </tr>
+      
+      <tr>
+         <th>11</th>
+         <td>Sachin</td>
+         <td>Mumbai</td>
+         <td>400003</td>
+          <td>
+          <button title="" type="button"
+            class="btn btn-danger remove show_tip"
+            data-original-title="Remove from list">
+            <i class="fa fa-trash-o"></i>
+          </button>
+        </td>
+      </tr>
+      
+      <tr>
+         <th>12</th>
+         <td>Uma</td>
+         <td>Pune</td>
+         <td>411027</td>
+          <td>
+          <button title="" type="button"
+            class="btn btn-danger remove show_tip"
+            data-original-title="Remove from list">
+            <i class="fa fa-trash-o"></i>
+          </button>
+        </td>
+      </tr>
+          </tbody>
+        </table>   
       </div>
+      <div class="col-md-12 text-center">
+      <ul class="pagination pagination-lg pager" id="myPager"></ul>
       </div>
-        <script src="../bootstrap/js/jquery.js"></script>
-<script src="../bootstrap/js/bootstrap.min.js"></script>
-<script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-transition.js"></script>
-<script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
-<script>
-// Load this when the DOM is ready
-$(function(){
-  // You used .myCarousel here. 
-  // That's the class selector not the id selector,
-  // which is #myCarousel
-  $('#myCarousel').carousel();
-});
-</script>
-   <!--/ Carousel -->
-           <!-- Panels -->
-        <div class ="container">
-   <div class="page-header">
-        <h1>Panels</h1>
-      </div>
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Panel title</h3>
-            </div>
-            <div class="panel-body">
-              Panel content
-            </div>
-          </div>
-        </div><!-- /.col-sm-4 -->
-        <div class="col-sm-4">
-          <div class="panel panel-success">
-            <div class="panel-heading">
-              <h3 class="panel-title">Panel title</h3>
-            </div>
-            <div class="panel-body">
-              Panel content
-            </div>
-          </div>
-        </div><!-- /.col-sm-4 -->
-        <div class="col-sm-4">
-          <div class="panel panel-warning">
-            <div class="panel-heading">
-              <h3 class="panel-title">Panel title</h3>
-            </div>
-            <div class="panel-body">
-              Panel content
-            </div>
-          </div>
-        </div><!-- /.col-sm-4 -->
-      </div>
-             </div>
-          <!-- /Panels -->
-         <!-- galeria -->
-    <div class="container">
+	</div>
+</div>
+        <script>
+            $.fn.pageMe = function (opts) {
+                var $this = this,
+                    defaults = {
+                        perPage: 7,
+                        showPrevNext: false,
+                        hidePageNumbers: false
+                    },
+                    settings = $.extend(defaults, opts);
 
-        <div class="row">
+                var listElement = $this;
+                var perPage = settings.perPage;
+                var children = listElement.children();
+                var pager = $('.pager');
 
-            <div class="col-lg-12">
-                <h1 class="page-header">Thumbnail Gallery</h1>
-            </div>
+                if (typeof settings.childSelector != "undefined") {
+                    children = listElement.find(settings.childSelector);
+                }
 
-            <div class="col-md-4 thumb">
-                <a class="thumbnail" href="img/002.jpg">
-                    <img class="img-responsive" src="img/002.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-md-4 thumb">
-                <a class="thumbnail" href="img/003.jpg">
-                    <img class="img-responsive" src="img/003.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-md-4 thumb">
-                <a class="thumbnail" href="img/004.jpg">
-                    <img class="img-responsive" src="img/004.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-md-4 thumb">
-                <a class="thumbnail" href="img/005.jpg">
-                    <img class="img-responsive" src="img/005.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-md-4 thumb">
-                <a class="thumbnail" href="img/006.jpg">
-                    <img class="img-responsive" src="img/006.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-md-4 thumb">
-                <a class="thumbnail" href="img/007.jpg">
-                    <img class="img-responsive" src="img/007.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-md-4 thumb">
-                <a class="thumbnail" href="img/008.jpg">
-                    <img class="img-responsive" src="img/008.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-md-4 thumb">
-                <a class="thumbnail" href="img/009.jpg">
-                    <img class="img-responsive" src="img/009.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-md-4 thumb">
-                <a class="thumbnail" href="img/010.jpg">
-                    <img class="img-responsive" src="img/010.jpg" alt="">
-                </a>
-            </div>
-        </div>
-                </div>
+                if (typeof settings.pagerSelector != "undefined") {
+                    pager = $(settings.pagerSelector);
+                }
+
+                var numItems = children.size();
+                var numPages = Math.ceil(numItems / perPage);
+
+                pager.data("curr", 0);
+
+                if (settings.showPrevNext) {
+                    $('<li><a href="#" class="prev_link">´</a></li>').appendTo(pager);
+                }
+
+                var curr = 0;
+                while (numPages > curr && (settings.hidePageNumbers == false)) {
+                    $('<li><a href="#" class="page_link">' + (curr + 1) + '</a></li>').appendTo(pager);
+                    curr++;
+                }
+
+                if (settings.showPrevNext) {
+                    $('<li><a href="#" class="next_link">ª</a></li>').appendTo(pager);
+                }
+
+                pager.find('.page_link:first').addClass('active');
+                pager.find('.prev_link').hide();
+                if (numPages <= 1) {
+                    pager.find('.next_link').hide();
+                }
+                pager.children().eq(1).addClass("active");
+
+                children.hide();
+                children.slice(0, perPage).show();
+
+                pager.find('li .page_link').click(function () {
+                    var clickedPage = $(this).html().valueOf() - 1;
+                    goTo(clickedPage, perPage);
+                    return false;
+                });
+                pager.find('li .prev_link').click(function () {
+                    previous();
+                    return false;
+                });
+                pager.find('li .next_link').click(function () {
+                    next();
+                    return false;
+                });
+
+                function previous() {
+                    var goToPage = parseInt(pager.data("curr")) - 1;
+                    goTo(goToPage);
+                }
+
+                function next() {
+                    goToPage = parseInt(pager.data("curr")) + 1;
+                    goTo(goToPage);
+                }
+
+                function goTo(page) {
+                    var startAt = page * perPage,
+                        endOn = startAt + perPage;
+
+                    children.css('display', 'none').slice(startAt, endOn).show();
+
+                    if (page >= 1) {
+                        pager.find('.prev_link').show();
+                    }
+                    else {
+                        pager.find('.prev_link').hide();
+                    }
+
+                    if (page < (numPages - 1)) {
+                        pager.find('.next_link').show();
+                    }
+                    else {
+                        pager.find('.next_link').hide();
+                    }
+
+                    pager.data("curr", page);
+                    pager.children().removeClass("active");
+                    pager.children().eq(page + 1).addClass("active");
+
+                }
+            };
+
+            $(document).ready(function () {
+
+                $('#myTable').pageMe({ pagerSelector: '#myPager', showPrevNext: true, hidePageNumbers: false, perPage: 4 });
+
+            });
+        </script>
    <hr>
          <!-- P‰ta -->
             <footer>
