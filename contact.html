@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
- 
-   <title> Bootstrap project</title>
+  	<meta charset=”utf-8”>
+ 		<title> Bootstrap project</title>
 		<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
@@ -49,7 +48,7 @@
    <div id="address" class="col-md-4">
     <address>
     <h2>Adresa:</h2>
-    <p class="lead"><a href="https://www.google.sk/maps/place/Trieda+Andreja+Hlinku+603%2F1,+949+01+Nitra-Chrenov%C3%A1/@48.3084366,18.0885333,17z/data=!3m1!4b1!4m2!3m1!1s0x476b3ee413e5c133:0x862b1fda735b50b3">UKF, Fakulta prirodnych vied,<br>
+    <p class="lead"><a href="https://www.google.sk/maps/place/Trieda+Andreja+Hlinku+603%2F1,+949+01+Nitra-Chrenov%C3%A1/@48.3084366,18.0885333,17z/data=!3m1!4b1!4m2!3m1!1s0x476b3ee413e5c133:0x862b1fda735b50b3">UKF, Fakulta prírodných vied,<br>
 Tr. A. Hlinku 1, Nitra 949 01</a><br>
       Phone: XXX-XXX-XXXX<br>
       Fax: XXX-XXX-YYYY</p>
@@ -60,11 +59,54 @@ Tr. A. Hlinku 1, Nitra 949 01</a><br>
       </div>
       </div>
   </div>
+    <hr />
+    <h2>Pošlite nám email</h2>
+     <div class="row">
+  <form class="form-horizontal" action="mailto:meno@domena.sk" name="commentform">
+    <div class="form-group">
+        <div class="col-md-4">
+            <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Meno"/>
+        </div>
+        <div class="col-md-4">
+            <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Priezvisko"/>
+        </div>
+        <div class="col-md-4 input-group">
+        <span class="input-group-addon">@</span>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Email"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-12">
+            <textarea rows="6" class="form-control" id="comments" name="comments" placeholder="Miesto pre Vaše otázky"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-6">
+            <button type="submit" value="Submit" class="btn btn-success pull-right">Poslat </button>
+        </div>
+    </div>
+</form>
+</div><!-- /row -->
 </div>
+   <hr>
+         <!-- Päta -->
+            <footer>
+      <div class="container">
+          <p class="text-muted">&copy; UKF v Nitre, Fakulta prírodných vied.</p>
+                     
+        <div id="footer-links"> <ul id="footer"> 
+             <li><a href="https://www.youtube.com/">Youtube</a>
+             <a href="https://www.facebook.com">Facebook  </a>
+            <a href="https://www.twitter.com">Twitter</a>
+            <a href="https://www.instagram.com"> Instagram </a></li>
+            </ul></div>
+             </div>
+    </footer>
 
+              <!-- /Päta -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
    
   </body>
 </html>
