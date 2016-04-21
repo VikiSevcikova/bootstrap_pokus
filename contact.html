@@ -1,16 +1,71 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset=”utf-8”>
- 		<title> Bootstrap project</title>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+ 
+   <title> Bootstrap project</title>
 		<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
  </head>
-	<body>
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-	</body>
+  <body>
+
+      <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.html">Bootstrap_pokus</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li ><a href="index.html">Domov</a></li>
+                <li class="active"><a href="contact.html">Kontakt</a></li>
+                <li><a href="#about">Tabulka</a></li>
+    
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
+
+<div class="container">
+<div class="row">
+
+  <hr class="featurette-divider hidden-lg">
+     <div id="map-outer" class="col-md-12">
+   <div id="address" class="col-md-4">
+    <address>
+    <h2>Adresa:</h2>
+    <p class="lead"><a href="https://www.google.sk/maps/place/Trieda+Andreja+Hlinku+603%2F1,+949+01+Nitra-Chrenov%C3%A1/@48.3084366,18.0885333,17z/data=!3m1!4b1!4m2!3m1!1s0x476b3ee413e5c133:0x862b1fda735b50b3">UKF, Fakulta prirodnych vied,<br>
+Tr. A. Hlinku 1, Nitra 949 01</a><br>
+      Phone: XXX-XXX-XXXX<br>
+      Fax: XXX-XXX-YYYY</p>
+    </address>
+   </div>
+      <div id="map-container" class="col-md-8">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2653.7095851131294!2d18.08853331496106!3d48.3084366472254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476b3ee413e5c133%3A0x862b1fda735b50b3!2sTrieda+Andreja+Hlinku+603%2F1%2C+949+01+Nitra-Chrenov%C3%A1!5e0!3m2!1ssk!2ssk!4v1461230650946" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+      </div>
+  </div>
+</div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+   
+  </body>
 </html>
+
