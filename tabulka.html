@@ -71,7 +71,8 @@ $(document).ready(function() {
          <td>560001</td>
           <td>
              <div class="deleterow glyphicon glyphicon-remove" onclick="Delete(this)"></div>
-             <div class="editrow glyphicon glyphicon-edit"></div>               
+             <div class="editrow glyphicon glyphicon-edit"></div>          
+             <div class="highlightrow glyphicon glyphicon-bold"></div>     
         </td>
       </tr>
       
@@ -82,7 +83,8 @@ $(document).ready(function() {
          <td>400003</td>
            <td>
              <div class="deleterow glyphicon glyphicon-remove" onclick="Delete(this)"></div>
-             <div class="editrow glyphicon glyphicon-edit"></div>             
+             <div class="editrow glyphicon glyphicon-edit"></div>           
+             <div class="highlightrow glyphicon glyphicon-bold"></div>   
         </td>
       </tr>
       
@@ -93,7 +95,8 @@ $(document).ready(function() {
          <td>411027</td>
           <td>
              <div class="deleterow glyphicon glyphicon-remove" onclick="Delete(this)"></div>
-             <div class="editrow glyphicon glyphicon-edit"></div>            
+             <div class="editrow glyphicon glyphicon-edit"></div>
+              <div class="highlightrow glyphicon glyphicon-bold"></div>             
         </td>
       </tr>
                <tr>
@@ -103,7 +106,8 @@ $(document).ready(function() {
          <td>560001</td>
            <td>
              <div class="deleterow glyphicon glyphicon-remove" onclick="Delete(this)"></div>
-             <div class="editrow glyphicon glyphicon-edit"></div>                
+             <div class="editrow glyphicon glyphicon-edit"></div>
+               <div class="highlightrow glyphicon glyphicon-bold"></div>                 
         </td>
       </tr>
       
@@ -114,7 +118,8 @@ $(document).ready(function() {
          <td>400003</td>
           <td>
              <div class="deleterow glyphicon glyphicon-remove" onclick="Delete(this)"></div>
-             <div class="editrow glyphicon glyphicon-edit"></div>              
+             <div class="editrow glyphicon glyphicon-edit"></div>          
+              <div class="highlightrow glyphicon glyphicon-bold"></div>     
         </td>
       </tr>
       
@@ -125,7 +130,8 @@ $(document).ready(function() {
          <td>411027</td>
           <td>
              <div class="deleterow glyphicon glyphicon-remove" onclick="Delete(this)"></div>
-             <div class="editrow glyphicon glyphicon-edit"></div>                
+             <div class="editrow glyphicon glyphicon-edit"></div>
+                <div class="highlightrow glyphicon glyphicon-bold"></div>               
         </td>
       </tr>
                <tr>
@@ -136,6 +142,7 @@ $(document).ready(function() {
             <td>
              <div class="deleterow glyphicon glyphicon-remove" onclick="Delete(this)"></div>
              <div class="editrow glyphicon glyphicon-edit"></div>
+                <div class="highlightrow glyphicon glyphicon-bold"></div> 
         </td>
       </tr>
       
@@ -147,6 +154,7 @@ $(document).ready(function() {
            <td>
              <div class="deleterow glyphicon glyphicon-remove" onclick="Delete(this)"></div>
              <div class="editrow glyphicon glyphicon-edit"></div>
+               <div class="highlightrow glyphicon glyphicon-bold"></div> 
         </td>
       </tr>
       
@@ -158,6 +166,7 @@ $(document).ready(function() {
            <td>
              <div class="deleterow glyphicon glyphicon-remove" onclick="Delete(this)"></div>
              <div class="editrow glyphicon glyphicon-edit"></div>
+               <div class="highlightrow glyphicon glyphicon-bold"></div> 
            </td>
       </tr>
                <tr>
@@ -168,6 +177,7 @@ $(document).ready(function() {
                  <td>
              <div class="deleterow glyphicon glyphicon-remove" onclick="Delete(this)"></div>
              <div class="editrow glyphicon glyphicon-edit"></div>
+                     <div class="highlightrow glyphicon glyphicon-bold"></div> 
         </td>
       </tr>
       
@@ -178,7 +188,8 @@ $(document).ready(function() {
          <td>400003</td>
                  <td>
              <div class="deleterow glyphicon glyphicon-remove" onclick="Delete(this)"></div>
-             <div class="editrow glyphicon glyphicon-edit" onclick="Edit"></div>
+             <div class="editrow glyphicon glyphicon-edit"></div>
+                     <div class="highlightrow glyphicon glyphicon-bold"></div> 
         </td>
       </tr>
       
@@ -190,6 +201,7 @@ $(document).ready(function() {
                  <td>
              <div class="deleterow glyphicon glyphicon-remove" onclick="Delete(this)"></div>
              <div class="editrow glyphicon glyphicon-edit"></div>
+                     <div class="highlightrow glyphicon glyphicon-bold"></div> 
         </td>
       </tr>
 
@@ -316,14 +328,6 @@ $(document).ready(function() {
 	        p.parentNode.removeChild(p);
 	    }
 
-	    $(".deleterow").on("click", function () {
-	        var $killrow = $($(this).parent('td')).parent('tr');
-	        $killrow.addClass("danger");
-	        $killrow.fadeOut(2000, function () {
-	            $(this).remove();
-	        });
-	    });
-
 	    $(".highlightrow").on("click", function () {
 	            var $row = $($(this).parent('td')).parent('tr');
 	            $row.addClass("success");
@@ -349,7 +353,7 @@ $(document).ready(function() {
                 var $priezvisko = document.getElementById("newLname").value;
                 var $plat = document.getElementById("newsalary").value;
 
-                $('table tr:last').after("<tr><td>" + $id + "</td><td>" + $meno + "</td><td>" + $priezvisko + "</td><td>" + $plat + "</td><td><div class=\"deleterow glyphicon glyphicon-remove\" onclick=\"Delete(this)\"><div class=\"editrow glyphicon glyphicon-edit\"></div></td></tr>");
+                $('table tr:last').after("<tr><td>" + $id + "</td><td>" + $meno + "</td><td>" + $priezvisko + "</td><td>" + $plat + "</td><td><div class=\"deleterow glyphicon glyphicon-remove\" onclick=\"Delete(this)\"><div class=\"editrow glyphicon glyphicon-edit\"></div><div class=\"highlightrow glyphicon glyphicon-bold\"></div></td></tr>");
                 $(document.getElementById("newform")).removeClass("success");
               
             });
