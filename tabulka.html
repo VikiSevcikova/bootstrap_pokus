@@ -3,76 +3,47 @@
 	<head>
 		<meta charset=îutf-8î>
  		<title> Bootstrap project</title>
- <script type='text/javascript'
-  src='http://code.jquery.com/jquery-1.10.1.js'></script>
-<link rel="stylesheet" type="text/css"
-  href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css"
-  href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
-<script type='text/javascript'
-  src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-<link rel="stylesheet" type="text/css"
-  href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-<script type='text/javascript'>
-$(window).load(function(){
-$(function () {
-    $("table#mytable").on("click", ".remove", function () {
-        $(this).closest('tr').remove();
-    });
-});
-$(function () {
-    $(".show_tip").tooltip({
-        container: 'body'
-    });
-});
-$(document).click(function () {
-    $('.tooltip').remove();
-    $('[title]').tooltip();
-});
-});
-</script>
-   
+	<link rel="shortcut icon" type="image/png" href="/media/images/favicon.png">
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.datatables.net/rss.xml">
+	<link rel="stylesheet" type="text/css" href="/media/css/site-examples.css?_=d9c2c842fd3bd3ec7e90423dc6c620c1">
+	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.11/css/dataTables.bootstrap.min.css">
+	<style type="text/css" class="init">
+            .deleterow {
+                cursor: pointer;
+            }
+            .editrow {
+                cursor: pointer;
+            }
+            .highlightrow {
+                cursor: pointer;
+            }
+            
+            input {
+                color: black;
+            }
+	</style>
+	<script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.12.0.min.js">
+	</script>
+	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js">
+	</script>
+	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.11/js/dataTables.bootstrap.min.js">
+	</script>
+	<script type="text/javascript" class="init">
+	
+$(document).ready(function() {
+	$('#example').DataTable();
+} );
+	</script>
     </head>
-	<body>
-<div class="navbar-wrapper">
-      <div class="container">
+<body class="wide comments example dt-example-bootstrap">
 
-        <nav class="navbar navbar-inverse navbar-static-top">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="index.html">Bootstrap_pokus</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-              <ul class="nav navbar-nav">
-                <li><a href="index.html">Domov</a></li>
-                <li><a href="contact.html">Kontakt</a></li>
-                <li class="active"><a href="tabulka.html">Tabulka</a></li>
-    
-              </ul>
-            </div>
-          </div>
-        </nav>
+      <div class="fw-container">
+		<div class="fw-body">
+			<div class="content">
+				<table id="mytable" class="table table-striped table-bordered" cellspacing="0" width="100%">
 
-      </div>
-    </div>
-        <div class="container">
-  <h2>Tabulka</h2>
-<ul class="nav nav-tabs">
-  <li class="active"><a href="tabulka.html">Zobrazit tabulku</a></li>
-  <li><a href="#">Pridaù nov˝ ˙daj do tabulky</a></li>
-  <li><a href="#">Prekvapenie</a></li>
-</ul>
-</div>
-<div class="container">
-	<div class="row">
-      <div class="table-responsive">
-        <table class="table table-hover" id="mytable">
           <thead>
             <tr>
               <th>#</th>
@@ -90,11 +61,9 @@ $(document).click(function () {
          <td>Bangalore</td>
          <td>560001</td>
           <td>
-          <button title="" type="button"
-            class="btn btn-danger remove show_tip"
-            data-original-title="Remove from list">
-            <i class="fa fa-trash-o"></i>
-          </button>
+             <div class="deleterow glyphicon glyphicon-remove"></div>
+             <div class="editrow glyphicon glyphicon-edit"></div>
+             <div class="highlightrow glyphicon glyphicon-bold"></div>                  
         </td>
       </tr>
       
@@ -103,12 +72,10 @@ $(document).click(function () {
          <td>Sachin</td>
          <td>Mumbai</td>
          <td>400003</td>
-          <td>
-          <button title="" type="button"
-            class="btn btn-danger remove show_tip"
-            data-original-title="Remove from list">
-            <i class="fa fa-trash-o"></i>
-          </button>
+           <td>
+             <div class="deleterow glyphicon glyphicon-remove"></div>
+             <div class="editrow glyphicon glyphicon-edit"></div>
+             <div class="highlightrow glyphicon glyphicon-bold"></div>                  
         </td>
       </tr>
       
@@ -118,11 +85,9 @@ $(document).click(function () {
          <td>Pune</td>
          <td>411027</td>
           <td>
-          <button title="" type="button"
-            class="btn btn-danger remove show_tip"
-            data-original-title="Remove from list">
-            <i class="fa fa-trash-o"></i>
-          </button>
+             <div class="deleterow glyphicon glyphicon-remove"></div>
+             <div class="editrow glyphicon glyphicon-edit"></div>
+             <div class="highlightrow glyphicon glyphicon-bold"></div>                  
         </td>
       </tr>
                <tr>
@@ -130,12 +95,10 @@ $(document).click(function () {
          <td>Tanmay</td>
          <td>Bangalore</td>
          <td>560001</td>
-                   <td>
-          <button title="" type="button"
-            class="btn btn-danger remove show_tip"
-            data-original-title="Remove from list">
-            <i class="fa fa-trash-o"></i>
-          </button>
+           <td>
+             <div class="deleterow glyphicon glyphicon-remove"></div>
+             <div class="editrow glyphicon glyphicon-edit"></div>
+             <div class="highlightrow glyphicon glyphicon-bold"></div>                  
         </td>
       </tr>
       
@@ -145,11 +108,9 @@ $(document).click(function () {
          <td>Mumbai</td>
          <td>400003</td>
           <td>
-          <button title="" type="button"
-            class="btn btn-danger remove show_tip"
-            data-original-title="Remove from list">
-            <i class="fa fa-trash-o"></i>
-          </button>
+             <div class="deleterow glyphicon glyphicon-remove"></div>
+             <div class="editrow glyphicon glyphicon-edit"></div>
+             <div class="highlightrow glyphicon glyphicon-bold"></div>                  
         </td>
       </tr>
       
@@ -159,11 +120,9 @@ $(document).click(function () {
          <td>Pune</td>
          <td>411027</td>
           <td>
-          <button title="" type="button"
-            class="btn btn-danger remove show_tip"
-            data-original-title="Remove from list">
-            <i class="fa fa-trash-o"></i>
-          </button>
+             <div class="deleterow glyphicon glyphicon-remove"></div>
+             <div class="editrow glyphicon glyphicon-edit"></div>
+             <div class="highlightrow glyphicon glyphicon-bold"></div>                  
         </td>
       </tr>
                <tr>
@@ -171,12 +130,10 @@ $(document).click(function () {
          <td>Tanmay</td>
          <td>Bangalore</td>
          <td>560001</td>
-                   <td>
-          <button title="" type="button"
-            class="btn btn-danger remove show_tip"
-            data-original-title="Remove from list">
-            <i class="fa fa-trash-o"></i>
-          </button>
+            <td>
+             <div class="deleterow glyphicon glyphicon-remove"></div>
+             <div class="editrow glyphicon glyphicon-edit"></div>
+             <div class="highlightrow glyphicon glyphicon-bold"></div>                  
         </td>
       </tr>
       
@@ -185,12 +142,10 @@ $(document).click(function () {
          <td>Sachin</td>
          <td>Mumbai</td>
          <td>400003</td>
-          <td>
-          <button title="" type="button"
-            class="btn btn-danger remove show_tip"
-            data-original-title="Remove from list">
-            <i class="fa fa-trash-o"></i>
-          </button>
+           <td>
+             <div class="deleterow glyphicon glyphicon-remove"></div>
+             <div class="editrow glyphicon glyphicon-edit"></div>
+             <div class="highlightrow glyphicon glyphicon-bold"></div>                  
         </td>
       </tr>
       
@@ -199,12 +154,10 @@ $(document).click(function () {
          <td>Uma</td>
          <td>Pune</td>
          <td>411027</td>
-          <td>
-          <button title="" type="button"
-            class="btn btn-danger remove show_tip"
-            data-original-title="Remove from list">
-            <i class="fa fa-trash-o"></i>
-          </button>
+           <td>
+             <div class="deleterow glyphicon glyphicon-remove"></div>
+             <div class="editrow glyphicon glyphicon-edit"></div>
+             <div class="highlightrow glyphicon glyphicon-bold"></div>                  
         </td>
       </tr>
                <tr>
@@ -212,12 +165,10 @@ $(document).click(function () {
          <td>Tanmay</td>
          <td>Bangalore</td>
          <td>560001</td>
-                   <td>
-          <button title="" type="button"
-            class="btn btn-danger remove show_tip"
-            data-original-title="Remove from list">
-            <i class="fa fa-trash-o"></i>
-          </button>
+                 <td>
+             <div class="deleterow glyphicon glyphicon-remove"></div>
+             <div class="editrow glyphicon glyphicon-edit"></div>
+             <div class="highlightrow glyphicon glyphicon-bold"></div>                  
         </td>
       </tr>
       
@@ -226,12 +177,10 @@ $(document).click(function () {
          <td>Sachin</td>
          <td>Mumbai</td>
          <td>400003</td>
-          <td>
-          <button title="" type="button"
-            class="btn btn-danger remove show_tip"
-            data-original-title="Remove from list">
-            <i class="fa fa-trash-o"></i>
-          </button>
+                 <td>
+             <div class="deleterow glyphicon glyphicon-remove"></div>
+             <div class="editrow glyphicon glyphicon-edit"></div>
+             <div class="highlightrow glyphicon glyphicon-bold"></div>                  
         </td>
       </tr>
       
@@ -240,148 +189,63 @@ $(document).click(function () {
          <td>Uma</td>
          <td>Pune</td>
          <td>411027</td>
-          <td>
-          <button title="" type="button"
-            class="btn btn-danger remove show_tip"
-            data-original-title="Remove from list">
-            <i class="fa fa-trash-o"></i>
-          </button>
+                 <td>
+             <div class="deleterow glyphicon glyphicon-remove"></div>
+             <div class="editrow glyphicon glyphicon-edit"></div>
+             <div class="highlightrow glyphicon glyphicon-bold"></div>                  
         </td>
       </tr>
-          </tbody>
-        </table>   
-      </div>
-      <div class="col-md-12 text-center">
-      <ul class="pagination pagination-lg pager" id="myPager"></ul>
-      </div>
+    <tr id="newform">
+        <td><input type="text" id="newcislo" value=""></td>
+         <td><input type="text" id="newFname" value="Juno"></td>
+		 <td><input type="text" id="newLname" value="Kim"></td>
+		 <td><input type="text" id="newsalary" value="25488"></td>
+        <td><input type="button" id="newsubmit" value="Vloûiù"> </td>
+      </tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
 	</div>
-</div>
-        <script>
-            $.fn.pageMe = function (opts) {
-                var $this = this,
-                    defaults = {
-                        perPage: 7,
-                        showPrevNext: false,
-                        hidePageNumbers: false
-                    },
-                    settings = $.extend(defaults, opts);
-
-                var listElement = $this;
-                var perPage = settings.perPage;
-                var children = listElement.children();
-                var pager = $('.pager');
-
-                if (typeof settings.childSelector != "undefined") {
-                    children = listElement.find(settings.childSelector);
-                }
-
-                if (typeof settings.pagerSelector != "undefined") {
-                    pager = $(settings.pagerSelector);
-                }
-
-                var numItems = children.size();
-                var numPages = Math.ceil(numItems / perPage);
-
-                pager.data("curr", 0);
-
-                if (settings.showPrevNext) {
-                    $('<li><a href="#" class="prev_link">´</a></li>').appendTo(pager);
-                }
-
-                var curr = 0;
-                while (numPages > curr && (settings.hidePageNumbers == false)) {
-                    $('<li><a href="#" class="page_link">' + (curr + 1) + '</a></li>').appendTo(pager);
-                    curr++;
-                }
-
-                if (settings.showPrevNext) {
-                    $('<li><a href="#" class="next_link">ª</a></li>').appendTo(pager);
-                }
-
-                pager.find('.page_link:first').addClass('active');
-                pager.find('.prev_link').hide();
-                if (numPages <= 1) {
-                    pager.find('.next_link').hide();
-                }
-                pager.children().eq(1).addClass("active");
-
-                children.hide();
-                children.slice(0, perPage).show();
-
-                pager.find('li .page_link').click(function () {
-                    var clickedPage = $(this).html().valueOf() - 1;
-                    goTo(clickedPage, perPage);
-                    return false;
-                });
-                pager.find('li .prev_link').click(function () {
-                    previous();
-                    return false;
-                });
-                pager.find('li .next_link').click(function () {
-                    next();
-                    return false;
-                });
-
-                function previous() {
-                    var goToPage = parseInt(pager.data("curr")) - 1;
-                    goTo(goToPage);
-                }
-
-                function next() {
-                    goToPage = parseInt(pager.data("curr")) + 1;
-                    goTo(goToPage);
-                }
-
-                function goTo(page) {
-                    var startAt = page * perPage,
-                        endOn = startAt + perPage;
-
-                    children.css('display', 'none').slice(startAt, endOn).show();
-
-                    if (page >= 1) {
-                        pager.find('.prev_link').show();
-                    }
-                    else {
-                        pager.find('.prev_link').hide();
-                    }
-
-                    if (page < (numPages - 1)) {
-                        pager.find('.next_link').show();
-                    }
-                    else {
-                        pager.find('.next_link').hide();
-                    }
-
-                    pager.data("curr", page);
-                    pager.children().removeClass("active");
-                    pager.children().eq(page + 1).addClass("active");
-
-                }
-            };
-
-            $(document).ready(function () {
-
-                $('#myTable').pageMe({ pagerSelector: '#myPager', showPrevNext: true, hidePageNumbers: false, perPage: 4 });
-
+            
+    
+	<script>
+            $(".deleterow").on("click", function(){
+                var $killrow = $($(this).parent('td')).parent('tr');
+                    $killrow.addClass("danger");
+                $killrow.fadeOut(2000, function(){
+                    $(this).remove();
+            });});
+        
+            $(".highlightrow").on("click", function(){
+                var $row = $($(this).parent('td')).parent('tr');
+                $row.addClass("success");
             });
+            
+            $("#newsubmit").on("click", function(){
+               var $kto = document.getElementById("newname").value;
+               var $vek = document.getElementById("newage").value;
+               var $plat = document.getElementById("newsalary").value;
+               
+                $('table tr:last').after("<tr><td>"+$kto+"</td><td>"+$vek+"</td><td>"+$plat+"</td><td><div class=\"deleterow glyphicon glyphicon-remove\"></div><div class=\"editrow glyphicon glyphicon-edit\"></div><div class=\"highlightrow glyphicon glyphicon-bold\"></div></td></tr>");
+                $(document.getElementById("newform")).removeClass("success");
+            });
+            
+            $(".editrow").on("click", function(){
+               var $row = $($(this).parent('td')).parent('tr');
+               var tds = $row.children('td');
+               
+               document.getElementById("newname").value = tds[0].innerHTML;
+               document.getElementById("newage").value = tds[1].innerHTML;
+               document.getElementById("newsalary").value = tds[2].innerHTML;
+               
+               $(document.getElementById("newform")).addClass("success");
+               
+                $row.fadeOut(1000, function(){
+                    $(this).remove();
+                });
+            });
+            
         </script>
-   <hr>
-         <!-- P‰ta -->
-            <footer>
-      <div class="container">
-          <p class="text-muted">&copy; UKF v Nitre, Fakulta prÌrodn˝ch vied.</p>
-                     
-        <div id="footer-links"> <ul id="footer"> 
-             <li><a href="https://www.youtube.com/">Youtube</a>
-             <a href="https://www.facebook.com">Facebook  </a>
-            <a href="https://www.twitter.com">Twitter</a>
-            <a href="https://www.instagram.com"> Instagram </a></li>
-            </ul></div>
-             </div>
-    </footer>
-
-              <!-- /P‰ta -->
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	</body>
 </html>
